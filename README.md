@@ -1,6 +1,6 @@
 These are just IPS patch files to apply to English ROMs of Red and Yellow.
 Many patch utilities exist out there, but you can use LunarIPS as one such.
-Or if you do hex editing directly, you would overwrite the bytes "57 5E CB 3A CB 1B" at 0x03EE36 in Red (and Blue?) or at 0x03EFC2 with "16 00 1E 00 00 00".
+Or if you do hex editing directly, you would overwrite the bytes "57 5E CB 3A CB 1B" at 0x03EE36 in Red (and Blue?) or at 0x03EFC2 in Yellow with "16 00 1E 00 00 00".
 How does this work? Terribly. It's a hack. I didn't want to accidentally mess with any offsets so I needed a way to replace n bytes with n bytes. It would be a lot better to probably just use a jump routine to skip over all the badge boost logic, but I didn't figure that out. This method works, but it is wasteful.
 
 Reference https://github.com/pret/pokered/blob/master/engine/battle/core.asm and line 6609 .applyBoostToStat for the sequence.
